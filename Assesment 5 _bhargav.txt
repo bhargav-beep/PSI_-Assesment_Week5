@@ -1,0 +1,93 @@
+Q1.
+Solution-
+
+Sample table Company which contains the data 
+
+#Same structure with data 
+
+CREATE TABLE temp_employee AS SELECT *FROM Company;
+
+Q2.
+Solution-
+
+Sample table Company which contains the data
+
+#same structure without data
+
+CREATE TABLE temp2_employee AS SELECT *FROM Company WHERE 'X'='Y';
+
+Q3.
+Solution-
+
+#Fetch last 10 records 
+
+SELECT * FROM Employees ORDER BY Employeeid DESC LIMIT 10) 
+ORDER BY Employeeid ASC;
+
+# max and min salary
+
+SELECT MAX(Salary), MIN(Salary) 
+FROM Employees;
+
+Q4.
+Solution-
+
+user shopping template='''
+   SELECT
+   user_id
+    ,count(*) as num shopping
+    ,sum(amount) as total amount
+    FROM
+      shopping
+    WHERE
+      user_id = 1234
+    AND  shopping_date = '2015-11-12'
+    GROUP BY
+     user_id
+
+     items = {
+    'user_id': 1080,
+     "shopping_date': '2019-08-22'
+}
+
+    J=Jinja_SQL(item_style='pyformat')
+    query,bind item=j.prepare_query(user shopping template, items)
+
+   print(query)
+
+
+Q5.
+Solution-
+
+ SELECT * FROM Company WHERE F_NAME LIKE 'P%' AND L_NAME LIKE 'S%';
+
+Q6.
+Solution- 
+
+SELECT * FROM Students ORDER BY Student_ID DESC LIMIT 1
+
+Q7.
+Solution-
+
+WITH sales AS (
+    SELECT 
+        staff_id, 
+        COUNT(*) order_count  
+    FROM
+        sales.orders
+    WHERE 
+        YEAR(order_date) = 2022
+    GROUP BY
+        staff_id
+
+)
+SELECT
+    AVG(order_count) avg_orders_by_staff
+FROM 
+    sales;
+
+Q8.
+Solution-
+
+UPDATE macD_staff SET L_name = 'Kumar' WHERE ID=10
+DELETE FROM macD_staff WHERE ID ='1'
